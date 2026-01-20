@@ -2,12 +2,14 @@ import logging
 import os
 import re
 from datetime import date
-from typing import Tuple
+# 修改1：从 typing 导入 List
+from typing import List, Tuple
 
 import requests
 
 
-def push_serverchan3(all_logs: list[str]):
+# 修改2：将 list[str] 改为 List[str]
+def push_serverchan3(all_logs: List[str]):
     # === Server酱³ 推送（可选，通过环境变量控制） ===
     # 在本地或 GitHub Actions 设置：
     #   SC3_SENDKEY: 必填
